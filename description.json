@@ -1,0 +1,252 @@
+[
+  {
+    "animtion_name": "Aero Button",
+    "animation description": "A soft gradient button with a floating sheen and subtle hover lift.",
+    "file path containning animation code": "html/buttons/aerobutton.html"
+  },
+  {
+    "animtion_name": "Arrow Button",
+    "animation description": "A call-to-action button where the arrow nudges right in a loop.",
+    "file path containning animation code": "html/buttons/arrowbtn.html"
+  },
+  {
+    "animtion_name": "Aura Button",
+    "animation description": "A glowing button with an animated aura ring effect.",
+    "file path containning animation code": "html/buttons/aurabutton.html"
+  },
+  {
+    "animtion_name": "Copy Button",
+    "animation description": "A copy action button with a success bounce micro-interaction.",
+    "file path containning animation code": "html/buttons/copy.html"
+  },
+  {
+    "animtion_name": "Delete Button",
+    "animation description": "A danger button with a warning shake before delete action.",
+    "file path containning animation code": "html/buttons/delete.html"
+  },
+  {
+    "animtion_name": "Expand Button",
+    "animation description": "A button that expands its width to reveal more label space.",
+    "file path containning animation code": "html/buttons/expand.html"
+  },
+  {
+    "animtion_name": "Feedback Button",
+    "animation description": "A feedback trigger button with a gentle hover-like rise loop.",
+    "file path containning animation code": "html/buttons/feedback.html"
+  },
+  {
+    "animtion_name": "Gooey Button",
+    "animation description": "A gooey blob-inspired button that morphs organically.",
+    "file path containning animation code": "html/buttons/gooey.html"
+  },
+  {
+    "animtion_name": "Loading Button",
+    "animation description": "A loading state button that cycles through animated dots.",
+    "file path containning animation code": "html/buttons/loadingButton.html"
+  },
+  {
+    "animtion_name": "Press Button",
+    "animation description": "A pressable button with depth and active spring feedback.",
+    "file path containning animation code": "html/buttons/press.html"
+  },
+  {
+    "animtion_name": "Pulse Button",
+    "animation description": "A rhythmic pulse button to draw attention.",
+    "file path containning animation code": "html/buttons/pulse.html"
+  },
+  {
+    "animtion_name": "Rainbow Button",
+    "animation description": "A rainbow gradient button with continuously shifting colors.",
+    "file path containning animation code": "html/buttons/rainbowbutton.html"
+  },
+  {
+    "animtion_name": "Shimmer Button",
+    "animation description": "A button with a sweeping shimmer highlight.",
+    "file path containning animation code": "html/buttons/shimmerbtn.html"
+  },
+  {
+    "animtion_name": "Theme Toggler",
+    "animation description": "A toggle chip that animates between light and dark states.",
+    "file path containning animation code": "html/buttons/themetoggler.html"
+  },
+  {
+    "animtion_name": "Filter Cards",
+    "animation description": "Cards that animate in/out like filter transitions in a gallery.",
+    "file path containning animation code": "html/cards/filter.html"
+  },
+  {
+    "animtion_name": "Flip Card",
+    "animation description": "A 3D card that flips on the Y axis to reveal back content.",
+    "file path containning animation code": "html/cards/flip.html"
+  },
+  {
+    "animtion_name": "FlipY Card Stack",
+    "animation description": "A set of cards flipping vertically with staggered timing.",
+    "file path containning animation code": "html/cards/flipy.html"
+  },
+  {
+    "animtion_name": "Light Cards",
+    "animation description": "Interactive cards with moving light sweep and glow.",
+    "file path containning animation code": "html/cards/lightcards.html"
+  },
+  {
+    "animtion_name": "Stack Swipe Cards",
+    "animation description": "A stacked card deck that swipes through cards one-by-one.",
+    "file path containning animation code": "html/cards/stackswipe.html"
+  },
+  {
+    "animtion_name": "Canvas Carousel",
+    "animation description": "A carousel track that scrolls cards endlessly in one direction.",
+    "file path containning animation code": "html/carousels/canvas/canvas.html"
+  },
+  {
+    "animtion_name": "Canvas Carousel 02",
+    "animation description": "An alternate canvas-style carousel with reverse scrolling flow.",
+    "file path containning animation code": "html/carousels/canvas/canvas02.html"
+  },
+  {
+    "animtion_name": "Domino Carousel",
+    "animation description": "Tiles animate like dominoes with offset rotation timing.",
+    "file path containning animation code": "html/carousels/domino.html"
+  },
+  {
+    "animtion_name": "Highlight Carousel",
+    "animation description": "A carousel where active item scales and glows as highlight moves.",
+    "file path containning animation code": "html/carousels/hightlight.html"
+  },
+  {
+    "animtion_name": "Infinite Carousel",
+    "animation description": "A seamless horizontal marquee carousel loop.",
+    "file path containning animation code": "html/carousels/infinitecarousel.html"
+  },
+  {
+    "animtion_name": "Infinite Z Carousel",
+    "animation description": "Cards move in depth with scale changes to fake 3D rotation.",
+    "file path containning animation code": "html/carousels/infinitez.html"
+  },
+  {
+    "animtion_name": "Picture Cycle",
+    "animation description": "A slideshow-style picture cycle using fades and slight zoom.",
+    "file path containning animation code": "html/carousels/picCycle.html"
+  },
+  {
+    "animtion_name": "Scroll Rotate Carousel",
+    "animation description": "A rotating wheel of items that mimics scroll-driven rotation.",
+    "file path containning animation code": "html/carousels/scrollrotate.html"
+  },
+  {
+    "animtion_name": "Swift Carousel",
+    "animation description": "A fast, snappy carousel with eased slide transitions.",
+    "file path containning animation code": "html/carousels/swift.html"
+  },
+  {
+    "animtion_name": "Wheel Carousel",
+    "animation description": "Items placed around a circle and rotating like a wheel.",
+    "file path containning animation code": "html/carousels/wheel.html"
+  },
+  {
+    "animtion_name": "Animated Dropdown",
+    "animation description": "A dropdown menu with smooth expand and item fade transitions.",
+    "file path containning animation code": "html/inputs/dropdown.html"
+  },
+  {
+    "animtion_name": "Letter Stack",
+    "animation description": "Stacked letters that rise and settle with staggered motion.",
+    "file path containning animation code": "html/letterstack.html"
+  },
+  {
+    "animtion_name": "Dialog Modal",
+    "animation description": "A dialog box with scale-and-fade entrance animation.",
+    "file path containning animation code": "html/modals/dailog.html"
+  },
+  {
+    "animtion_name": "Report Bug Modal",
+    "animation description": "A modal panel styled for bug reports with pop-in motion.",
+    "file path containning animation code": "html/modals/reportbug.html"
+  },
+  {
+    "animtion_name": "Sign In Modal",
+    "animation description": "Authentication modal with progressive content reveal.",
+    "file path containning animation code": "html/modals/sign.html"
+  },
+  {
+    "animtion_name": "Toast Notification",
+    "animation description": "A toast message that slides in, pauses, then exits.",
+    "file path containning animation code": "html/modals/toast.html"
+  },
+  {
+    "animtion_name": "Todo Modal",
+    "animation description": "A task-entry modal with animated list reveal.",
+    "file path containning animation code": "html/modals/todo.html"
+  },
+  {
+    "animtion_name": "Tooltip",
+    "animation description": "A floating tooltip bubble that fades and shifts into view.",
+    "file path containning animation code": "html/modals/tooltip.html"
+  },
+  {
+    "animtion_name": "Breadcrumb Navigation",
+    "animation description": "Breadcrumb items with animated separators and active emphasis.",
+    "file path containning animation code": "html/navs/breadcrum.html"
+  },
+  {
+    "animtion_name": "Flower Navigation",
+    "animation description": "Radial navigation petals blooming from a center point.",
+    "file path containning animation code": "html/navs/flower.html"
+  },
+  {
+    "animtion_name": "Momo Navigation",
+    "animation description": "Sliding tab navigation with a smooth active indicator.",
+    "file path containning animation code": "html/navs/momonav.html"
+  },
+  {
+    "animtion_name": "Morphing Tabs",
+    "animation description": "Tabs that morph shape and background between active states.",
+    "file path containning animation code": "html/navs/morphingtabs.html"
+  },
+  {
+    "animtion_name": "Tipped Navigation",
+    "animation description": "Navigation labels with animated tooltip-like hints.",
+    "file path containning animation code": "html/navs/tipped.html"
+  },
+  {
+    "animtion_name": "Vercel-style Nav",
+    "animation description": "Minimal nav with animated underline indicator.",
+    "file path containning animation code": "html/navs/vercel.html"
+  },
+  {
+    "animtion_name": "Text Reveal Section",
+    "animation description": "Heading text revealed with mask-like upward motion.",
+    "file path containning animation code": "html/sections/about/textreveal.html"
+  },
+  {
+    "animtion_name": "Feature Swoop",
+    "animation description": "Feature cards swoop in with spring-like lateral movement.",
+    "file path containning animation code": "html/sections/features/featureswoop.html"
+  },
+  {
+    "animtion_name": "Scroll Stack",
+    "animation description": "Cards stacked vertically that offset as if driven by scroll.",
+    "file path containning animation code": "html/sections/features/scrollstack.html"
+  },
+  {
+    "animtion_name": "Stagger 3D Gallery",
+    "animation description": "Gallery cards with staggered depth and rotation animations.",
+    "file path containning animation code": "html/sections/gallery/stagger3d.html"
+  },
+  {
+    "animtion_name": "Tool Spread",
+    "animation description": "Tool icons spread out from center and settle into layout.",
+    "file path containning animation code": "html/sections/intergration/toolspread.html"
+  },
+  {
+    "animtion_name": "Stagger Cards",
+    "animation description": "A card list that animates upward with staggered delays.",
+    "file path containning animation code": "html/staggercards.html"
+  },
+  {
+    "animtion_name": "Swoop Text",
+    "animation description": "Display text that swoops in with eased horizontal motion.",
+    "file path containning animation code": "html/text/swoop.html"
+  }
+]
