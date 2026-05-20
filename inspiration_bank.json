@@ -1,0 +1,959 @@
+{
+  "metadata": {
+    "total_animations": 50,
+    "categories": {
+      "buttons": 14,
+      "cards": 5,
+      "navs": 6,
+      "modals": 6,
+      "carousels": 10,
+      "text": 1,
+      "sections": 5,
+      "inputs": 1,
+      "other": 2
+    }
+  },
+  "animations": [
+    {
+      "file": "buttons/aerobutton.html",
+      "title": "Aero Button",
+      "description": "A soft gradient button with a floating sheen and subtle hover lift.",
+      "category": "buttons",
+      "keyframes": {
+        "flow": "to{background-position:200% 0;}",
+        "bob": "50%{transform:translateY(-5px);}"
+      },
+      "animations": [
+        "flow 4s linear infinite, bob 2.5s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out",
+        "linear"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{background:linear-gradient(120deg,#4d7fff,#7fd2ff,#8f7dff);background-size:200% 200%;animation:flow 4s linear infinite, bob 2.5s ease-in-out infinite;}\n@keyframes flow{to{background-position:200% 0;}}\n@keyframes bob{50%{transform:translateY(-5px);}}"
+    },
+    {
+      "file": "buttons/arrowbtn.html",
+      "title": "Arrow Button",
+      "description": "A call-to-action button where the arrow nudges right in a loop.",
+      "category": "buttons",
+      "keyframes": {
+        "arrow": "50%{transform:translateX(8px);opacity:.8;}"
+      },
+      "animations": [
+        "arrow 1.2s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{position:relative;padding-right:46px}\n.btn::after{content:\"➜\";position:absolute;right:16px;animation:arrow 1.2s ease-in-out infinite}\n@keyframes arrow{50%{transform:translateX(8px);opacity:.8;}}"
+    },
+    {
+      "file": "buttons/aurabutton.html",
+      "title": "Aura Button",
+      "description": "A glowing button with an animated aura ring effect.",
+      "category": "buttons",
+      "keyframes": {
+        "pulseRing": "70%{box-shadow:0 0 0 18px rgba(124,155,255,0);}100%{box-shadow:0 0 0 0 rgba(124,155,255,0);}"
+      },
+      "animations": [
+        "pulseRing 2s infinite"
+      ],
+      "easings": [],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{position:relative;box-shadow:0 0 0 0 rgba(124,155,255,.6);animation:pulseRing 2s infinite}\n@keyframes pulseRing{70%{box-shadow:0 0 0 18px rgba(124,155,255,0);}100%{box-shadow:0 0 0 0 rgba(124,155,255,0);}}"
+    },
+    {
+      "file": "buttons/copy.html",
+      "title": "Copy Button",
+      "description": "A copy action button with a success bounce micro-interaction.",
+      "category": "buttons",
+      "keyframes": {
+        "copyBeat": "0%,85%,100%{transform:none}90%{transform:scale(1.08)}95%{transform:scale(.96)}"
+      },
+      "animations": [
+        "copyBeat 2.4s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{animation:copyBeat 2.4s ease-in-out infinite}\n@keyframes copyBeat{0%,85%,100%{transform:none}90%{transform:scale(1.08)}95%{transform:scale(.96)}}"
+    },
+    {
+      "file": "buttons/delete.html",
+      "title": "Delete Button",
+      "description": "A danger button with a warning shake before delete action.",
+      "category": "buttons",
+      "keyframes": {
+        "shake": "0%,88%,100%{transform:none}90%{transform:translateX(-3px)}92%{transform:translateX(3px)}94%{transform:translateX(-2px)}96%{transform:translateX(2px)}"
+      },
+      "animations": [
+        "shake 2.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{background:rgba(255,90,90,.2);border-color:rgba(255,120,120,.5);animation:shake 2.8s ease-in-out infinite}\n@keyframes shake{0%,88%,100%{transform:none}90%{transform:translateX(-3px)}92%{transform:translateX(3px)}94%{transform:translateX(-2px)}96%{transform:translateX(2px)}}"
+    },
+    {
+      "file": "buttons/expand.html",
+      "title": "Expand Button",
+      "description": "A button that expands its width to reveal more label space.",
+      "category": "buttons",
+      "keyframes": {
+        "expand": "0%,100%{width:120px}50%{width:190px}"
+      },
+      "animations": [
+        "expand 2.6s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{width:120px;overflow:hidden;white-space:nowrap;animation:expand 2.6s ease-in-out infinite}\n@keyframes expand{0%,100%{width:120px}50%{width:190px}}"
+    },
+    {
+      "file": "buttons/feedback.html",
+      "title": "Feedback Button",
+      "description": "A feedback trigger button with a gentle hover-like rise loop.",
+      "category": "buttons",
+      "keyframes": {
+        "lift": "50%{transform:translateY(-6px);filter:brightness(1.15)}"
+      },
+      "animations": [
+        "lift 2.2s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{animation:lift 2.2s ease-in-out infinite}\n@keyframes lift{50%{transform:translateY(-6px);filter:brightness(1.15)}}"
+    },
+    {
+      "file": "buttons/gooey.html",
+      "title": "Gooey Button",
+      "description": "A gooey blob-inspired button that morphs organically.",
+      "category": "buttons",
+      "keyframes": {
+        "morph": "0%,100%{border-radius:28px 34px 24px 30px}50%{border-radius:40px 18px 36px 20px}"
+      },
+      "animations": [
+        "morph 3s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{border-radius:30px;animation:morph 3s ease-in-out infinite}\n@keyframes morph{0%,100%{border-radius:28px 34px 24px 30px}50%{border-radius:40px 18px 36px 20px}}"
+    },
+    {
+      "file": "buttons/loadingButton.html",
+      "title": "Loading Button",
+      "description": "A loading state button that cycles through animated dots.",
+      "category": "buttons",
+      "keyframes": {
+        "bounce": "50%{transform:translateY(-6px);opacity:.65}"
+      },
+      "animations": [
+        "bounce 1s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.dots{display:inline-flex;gap:6px}\n.dot{width:8px;height:8px;border-radius:50%;background:#fff;animation:bounce 1s ease-in-out infinite}\n.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}\n@keyframes bounce{50%{transform:translateY(-6px);opacity:.65}}"
+    },
+    {
+      "file": "buttons/press.html",
+      "title": "Press Button",
+      "description": "A pressable button with depth and active spring feedback.",
+      "category": "buttons",
+      "keyframes": {
+        "press": "0%,100%{transform:translateY(0);box-shadow:0 8px 0 #3a4c8d}50%{transform:translateY(6px);box-shadow:0 2px 0 #3a4c8d}"
+      },
+      "animations": [
+        "press 2.2s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{box-shadow:0 8px 0 #3a4c8d;animation:press 2.2s ease-in-out infinite}\n@keyframes press{0%,100%{transform:translateY(0);box-shadow:0 8px 0 #3a4c8d}50%{transform:translateY(6px);box-shadow:0 2px 0 #3a4c8d}}"
+    },
+    {
+      "file": "buttons/pulse.html",
+      "title": "Pulse Button",
+      "description": "A rhythmic pulse button to draw attention.",
+      "category": "buttons",
+      "keyframes": {
+        "pulse": "50%{transform:scale(1.08);box-shadow:0 0 24px rgba(124,155,255,.7)}"
+      },
+      "animations": [
+        "pulse 1.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{animation:pulse 1.8s ease-in-out infinite}\n@keyframes pulse{50%{transform:scale(1.08);box-shadow:0 0 24px rgba(124,155,255,.7)}}"
+    },
+    {
+      "file": "buttons/rainbowbutton.html",
+      "title": "Rainbow Button",
+      "description": "A rainbow gradient button with continuously shifting colors.",
+      "category": "buttons",
+      "keyframes": {
+        "rainbow": "to{background-position:300% 0}"
+      },
+      "animations": [
+        "rainbow 4s linear infinite"
+      ],
+      "easings": [
+        "linear"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{background:linear-gradient(90deg,#ff6ec7,#7c9bff,#64f5a6,#ffd56e,#ff6ec7);background-size:300% 100%;animation:rainbow 4s linear infinite}\n@keyframes rainbow{to{background-position:300% 0}}"
+    },
+    {
+      "file": "buttons/shimmerbtn.html",
+      "title": "Shimmer Button",
+      "description": "A button with a sweeping shimmer highlight.",
+      "category": "buttons",
+      "keyframes": {
+        "shimmer": "to{left:140%}"
+      },
+      "animations": [
+        "shimmer 2s linear infinite"
+      ],
+      "easings": [
+        "linear"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.btn{position:relative;overflow:hidden}\n.btn::before{content:\"\";position:absolute;inset:0;left:-140%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);animation:shimmer 2s linear infinite}\n@keyframes shimmer{to{left:140%}}"
+    },
+    {
+      "file": "buttons/themetoggler.html",
+      "title": "Theme Toggler",
+      "description": "A toggle chip that animates between light and dark states.",
+      "category": "buttons",
+      "keyframes": {
+        "slide": "50%{left:70px;background:#dbe7ff}",
+        "toggleBg": "50%{background:#11172a}"
+      },
+      "animations": [
+        "toggleBg 3s ease-in-out infinite",
+        "slide 3s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.toggle{width:120px;height:54px;border-radius:28px;background:#1f2a4f;position:relative;animation:toggleBg 3s ease-in-out infinite}\n.knob{width:44px;height:44px;border-radius:50%;background:#ffd77c;position:absolute;top:5px;left:6px;animation:slide 3s ease-in-out infinite}\n@keyframes slide{50%{left:70px;background:#dbe7ff}}@keyframes toggleBg{50%{background:#11172a}}"
+    },
+    {
+      "file": "cards/filter.html",
+      "title": "Filter Cards",
+      "description": "Cards that animate in/out like filter transitions in a gallery.",
+      "category": "cards",
+      "keyframes": {
+        "filterIn": "0%,100%{opacity:.2;transform:translateY(14px) scale(.94)}40%,70%{opacity:1;transform:none}"
+      },
+      "animations": [
+        "filterIn 3s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.card{width:120px;height:150px;padding:12px;animation:filterIn 3s ease-in-out infinite}\n.card:nth-child(2){animation-delay:.25s}.card:nth-child(3){animation-delay:.5s}\n@keyframes filterIn{0%,100%{opacity:.2;transform:translateY(14px) scale(.94)}40%,70%{opacity:1;transform:none}}"
+    },
+    {
+      "file": "cards/flip.html",
+      "title": "Flip Card",
+      "description": "A 3D card that flips on the Y axis to reveal back content.",
+      "category": "cards",
+      "keyframes": {
+        "flipY": "40%,60%{transform:rotateY(180deg)}"
+      },
+      "animations": [
+        "flipY 3s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.flip{width:160px;height:200px;perspective:800px}\n.inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:flipY 3s ease-in-out infinite}\n.face{position:absolute;inset:0;display:grid;place-items:center;border-radius:14px;background:rgba(255,255,255,.12);backface-visibility:hidden;border:1px solid rgba(255,255,255,.2)}\n.back{transform:rotateY(180deg);background:rgba(124,155,255,.25)}\n@keyframes flipY{40%,60%{transform:rotateY(180deg)}}"
+    },
+    {
+      "file": "cards/flipy.html",
+      "title": "FlipY Card Stack",
+      "description": "A set of cards flipping vertically with staggered timing.",
+      "category": "cards",
+      "keyframes": {
+        "flipX": "50%{transform:rotateX(180deg)}"
+      },
+      "animations": [
+        "flipX 2.4s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.card{width:90px;height:120px;perspective:700px}\n.card::before{content:\"\";display:block;width:100%;height:100%;border-radius:12px;background:rgba(124,155,255,.35);border:1px solid rgba(255,255,255,.25);animation:flipX 2.4s ease-in-out infinite}\n.card:nth-child(2)::before{animation-delay:.2s}.card:nth-child(3)::before{animation-delay:.4s}\n@keyframes flipX{50%{transform:rotateX(180deg)}}"
+    },
+    {
+      "file": "cards/lightcards.html",
+      "title": "Light Cards",
+      "description": "Interactive cards with moving light sweep and glow.",
+      "category": "cards",
+      "keyframes": {
+        "spin": "to{transform:rotate(360deg)}"
+      },
+      "animations": [
+        "spin 3s linear infinite"
+      ],
+      "easings": [
+        "linear"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.card{width:170px;height:130px;position:relative;overflow:hidden}\n.card::before{content:\"\";position:absolute;inset:-40%;background:conic-gradient(from 90deg,transparent,rgba(255,255,255,.45),transparent);animation:spin 3s linear infinite}\n.card::after{content:\"\";position:absolute;inset:2px;background:rgba(18,26,49,.95);border-radius:10px}\n@keyframes spin{to{transform:rotate(360deg)}}"
+    },
+    {
+      "file": "cards/stackswipe.html",
+      "title": "Stack Swipe Cards",
+      "description": "A stacked card deck that swipes through cards one-by-one.",
+      "category": "cards",
+      "keyframes": {
+        "swipe": "0%,20%{transform:translate(0,0) scale(1)}45%{transform:translate(130px,-20px) rotate(12deg);opacity:0}46%{transform:translate(-10px,8px) scale(.92);opacity:0}60%,100%{transform:translate(0,0) scale(1);opacity:1}"
+      },
+      "animations": [
+        "swipe 3.2s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.deck{position:relative;width:180px;height:220px}\n.sheet{position:absolute;inset:0;border-radius:14px;background:rgba(124,155,255,.35);border:1px solid rgba(255,255,255,.22);animation:swipe 3.2s ease-in-out infinite}\n.sheet:nth-child(2){animation-delay:.3s}.sheet:nth-child(3){animation-delay:.6s}\n@keyframes swipe{0%,20%{transform:translate(0,0) scale(1)}45%{transform:translate(130px,-20px) rotate(12deg);opacity:0}46%{transform:translate(-10px,8px) scale(.92);opacity:0}60%,100%{transform:translate(0,0) scale(1);opacity:1}}"
+    },
+    {
+      "file": "carousels/canvas/canvas.html",
+      "title": "Canvas Carousel",
+      "description": "A carousel track that scrolls cards endlessly in one direction.",
+      "category": "carousels",
+      "keyframes": {
+        "slide": "to{transform:translateX(-74px)}"
+      },
+      "animations": [
+        "slide 8s linear infinite"
+      ],
+      "easings": [
+        "linear"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.track{animation:slide 8s linear infinite}\n@keyframes slide{to{transform:translateX(-74px)}}"
+    },
+    {
+      "file": "carousels/canvas/canvas02.html",
+      "title": "Canvas Carousel 02",
+      "description": "An alternate canvas-style carousel with reverse scrolling flow.",
+      "category": "carousels",
+      "keyframes": {
+        "slideRev": "to{transform:translateX(74px)}"
+      },
+      "animations": [
+        "slideRev 7s linear infinite"
+      ],
+      "easings": [
+        "linear"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.track{animation:slideRev 7s linear infinite}\n@keyframes slideRev{to{transform:translateX(74px)}}"
+    },
+    {
+      "file": "carousels/domino.html",
+      "title": "Domino Carousel",
+      "description": "Tiles animate like dominoes with offset rotation timing.",
+      "category": "carousels",
+      "keyframes": {
+        "domino": "50%{transform:rotate(22deg) translateY(-6px)}"
+      },
+      "animations": [
+        "domino 1.7s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)",
+        ":nth-child(5)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.tile{transform-origin:bottom center;animation:domino 1.7s ease-in-out infinite}\n.tile:nth-child(2){animation-delay:.1s}.tile:nth-child(3){animation-delay:.2s}.tile:nth-child(4){animation-delay:.3s}.tile:nth-child(5){animation-delay:.4s}\n@keyframes domino{50%{transform:rotate(22deg) translateY(-6px)}}"
+    },
+    {
+      "file": "carousels/hightlight.html",
+      "title": "Highlight Carousel",
+      "description": "A carousel where active item scales and glows as highlight moves.",
+      "category": "carousels",
+      "keyframes": {
+        "focus": "0%,100%{opacity:.45;transform:scale(.92)}25%{opacity:1;transform:scale(1.08);box-shadow:0 0 18px rgba(124,155,255,.7)}"
+      },
+      "animations": [
+        "focus 3s infinite"
+      ],
+      "easings": [],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.tile{opacity:.45;animation:focus 3s infinite}\n.tile:nth-child(2){animation-delay:.4s}.tile:nth-child(3){animation-delay:.8s}.tile:nth-child(4){animation-delay:1.2s}\n@keyframes focus{0%,100%{opacity:.45;transform:scale(.92)}25%{opacity:1;transform:scale(1.08);box-shadow:0 0 18px rgba(124,155,255,.7)}}"
+    },
+    {
+      "file": "carousels/infinitecarousel.html",
+      "title": "Infinite Carousel",
+      "description": "A seamless horizontal marquee carousel loop.",
+      "category": "carousels",
+      "keyframes": {
+        "marquee": "to{transform:translateX(-50%)}"
+      },
+      "animations": [
+        "marquee 10s linear infinite"
+      ],
+      "easings": [
+        "linear"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.track{width:max-content;animation:marquee 10s linear infinite}\n@keyframes marquee{to{transform:translateX(-50%)}}"
+    },
+    {
+      "file": "carousels/infinitez.html",
+      "title": "Infinite Z Carousel",
+      "description": "Cards move in depth with scale changes to fake 3D rotation.",
+      "category": "carousels",
+      "keyframes": {
+        "zturn": "0%,100%{transform:scale(.75);opacity:.45}50%{transform:scale(1.2);opacity:1}"
+      },
+      "animations": [
+        "zturn 2.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.tile{animation:zturn 2.8s ease-in-out infinite}\n.tile:nth-child(2){animation-delay:.3s}.tile:nth-child(3){animation-delay:.6s}.tile:nth-child(4){animation-delay:.9s}\n@keyframes zturn{0%,100%{transform:scale(.75);opacity:.45}50%{transform:scale(1.2);opacity:1}}"
+    },
+    {
+      "file": "carousels/picCycle.html",
+      "title": "Picture Cycle",
+      "description": "A slideshow-style picture cycle using fades and slight zoom.",
+      "category": "carousels",
+      "keyframes": {
+        "fadeSwap": "0%,100%{opacity:0;transform:scale(1.08)}10%,30%{opacity:1;transform:scale(1)}"
+      },
+      "animations": [
+        "fadeSwap 6s infinite"
+      ],
+      "easings": [],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.pic{width:240px;height:140px;border-radius:12px;background:rgba(124,155,255,.2);position:absolute;inset:0;margin:auto;border:1px solid rgba(255,255,255,.22);animation:fadeSwap 6s infinite}\n.pic:nth-child(2){animation-delay:2s}.pic:nth-child(3){animation-delay:4s}\n@keyframes fadeSwap{0%,100%{opacity:0;transform:scale(1.08)}10%,30%{opacity:1;transform:scale(1)}}"
+    },
+    {
+      "file": "carousels/scrollrotate.html",
+      "title": "Scroll Rotate Carousel",
+      "description": "A rotating wheel of items that mimics scroll-driven rotation.",
+      "category": "carousels",
+      "keyframes": {
+        "rot": "to{transform:rotate(360deg)}"
+      },
+      "animations": [
+        "rot 10s linear infinite"
+      ],
+      "easings": [
+        "linear"
+      ],
+      "triggers": [
+        ":nth-child(1)",
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)",
+        ":nth-child(5)",
+        ":nth-child(6)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.wheel{position:relative;width:220px;height:220px;animation:rot 10s linear infinite}\n.orb{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px;border-radius:50%;background:rgba(124,155,255,.4);border:1px solid rgba(255,255,255,.3)}\n.orb:nth-child(1){transform:translate(0,-96px)}.orb:nth-child(2){transform:translate(83px,-48px)}.orb:nth-child(3){transform:translate(83px,48px)}.orb:nth-child(4){transform:translate(0,96px)}.orb:nth-child(5){transform:translate(-83px,48px)}.orb:nth-child(6){transform:translate(-83px,-48px)}\n@keyframes rot{to{transform:rotate(360deg)}}"
+    },
+    {
+      "file": "carousels/swift.html",
+      "title": "Swift Carousel",
+      "description": "A fast, snappy carousel with eased slide transitions.",
+      "category": "carousels",
+      "keyframes": {
+        "swift": "50%{transform:translateX(26px)}"
+      },
+      "animations": [
+        "swift 2.2s cubic-bezier(.22,.61,.36,1) infinite"
+      ],
+      "easings": [
+        "cubic-bezier(.22,.61,.36,1)"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.tile{animation:swift 2.2s cubic-bezier(.22,.61,.36,1) infinite}\n.tile:nth-child(2){animation-delay:.2s}.tile:nth-child(3){animation-delay:.4s}.tile:nth-child(4){animation-delay:.6s}\n@keyframes swift{50%{transform:translateX(26px)}}"
+    },
+    {
+      "file": "carousels/wheel.html",
+      "title": "Wheel Carousel",
+      "description": "Items placed around a circle and rotating like a wheel.",
+      "category": "carousels",
+      "keyframes": {
+        "rot": "to{transform:rotate(360deg)}"
+      },
+      "animations": [
+        "rot 12s linear infinite"
+      ],
+      "easings": [
+        "linear"
+      ],
+      "triggers": [
+        ":nth-child(1)",
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)",
+        ":nth-child(5)",
+        ":nth-child(6)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.wheel{width:230px;height:230px;border:1px dashed rgba(255,255,255,.25);border-radius:50%;position:relative;animation:rot 12s linear infinite}\n.item{position:absolute;width:44px;height:44px;border-radius:50%;background:rgba(124,155,255,.45);border:1px solid rgba(255,255,255,.3)}\n.item:nth-child(1){top:-12px;left:92px}.item:nth-child(2){top:38px;right:-12px}.item:nth-child(3){bottom:38px;right:-12px}.item:nth-child(4){bottom:-12px;left:92px}.item:nth-child(5){bottom:38px;left:-12px}.item:nth-child(6){top:38px;left:-12px}\n@keyframes rot{to{transform:rotate(360deg)}}"
+    },
+    {
+      "file": "inputs/dropdown.html",
+      "title": "Animated Dropdown",
+      "description": "A dropdown menu with smooth expand and item fade transitions.",
+      "category": "inputs",
+      "keyframes": {
+        "open": "0%,100%{max-height:0;opacity:.35}40%,70%{max-height:180px;opacity:1}"
+      },
+      "animations": [
+        "open 2.4s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.menu{width:230px;border-radius:12px;border:1px solid rgba(255,255,255,.2);overflow:hidden;background:rgba(255,255,255,.08)}\n.head{padding:12px 14px;font-weight:600;background:rgba(124,155,255,.25)}\n.list{animation:open 2.4s ease-in-out infinite;transform-origin:top}\n.item{padding:10px 14px;border-top:1px solid rgba(255,255,255,.15)}\n@keyframes open{0%,100%{max-height:0;opacity:.35}40%,70%{max-height:180px;opacity:1}}"
+    },
+    {
+      "file": "letterstack.html",
+      "title": "Letter Stack",
+      "description": "Stacked letters that rise and settle with staggered motion.",
+      "category": "other",
+      "keyframes": {
+        "stack": "50%{transform:translateY(-12px)}"
+      },
+      "animations": [
+        "stack 1.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.letter{font-size:44px;font-weight:800;display:inline-block;animation:stack 1.8s ease-in-out infinite}\n.letter:nth-child(2){animation-delay:.1s}.letter:nth-child(3){animation-delay:.2s}.letter:nth-child(4){animation-delay:.3s}\n@keyframes stack{50%{transform:translateY(-12px)}}"
+    },
+    {
+      "file": "modals/dailog.html",
+      "title": "Dialog Modal",
+      "description": "A dialog box with scale-and-fade entrance animation.",
+      "category": "modals",
+      "keyframes": {
+        "dialogIn": "0%,100%{opacity:.1;transform:scale(.8)}35%,70%{opacity:1;transform:scale(1)}"
+      },
+      "animations": [
+        "dialogIn 2.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.modal{width:300px;padding:18px 20px;animation:dialogIn 2.8s ease-in-out infinite}\n@keyframes dialogIn{0%,100%{opacity:.1;transform:scale(.8)}35%,70%{opacity:1;transform:scale(1)}}"
+    },
+    {
+      "file": "modals/reportbug.html",
+      "title": "Report Bug Modal",
+      "description": "A modal panel styled for bug reports with pop-in motion.",
+      "category": "modals",
+      "keyframes": {
+        "pop": "0%,100%{opacity:0;transform:translateY(18px) scale(.96)}40%,70%{opacity:1;transform:none}"
+      },
+      "animations": [
+        "pop 2.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.modal{width:320px;padding:20px;animation:pop 2.8s ease-in-out infinite}\n@keyframes pop{0%,100%{opacity:0;transform:translateY(18px) scale(.96)}40%,70%{opacity:1;transform:none}}"
+    },
+    {
+      "file": "modals/sign.html",
+      "title": "Sign In Modal",
+      "description": "Authentication modal with progressive content reveal.",
+      "category": "modals",
+      "keyframes": {
+        "reveal": "0%,100%{opacity:.25;transform:translateY(6px)}45%,70%{opacity:1;transform:none}"
+      },
+      "animations": [
+        "reveal 2.5s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.modal{width:320px;padding:20px}\n.field{height:38px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);animation:reveal 2.5s ease-in-out infinite}\n.field:nth-child(3){animation-delay:.2s}\n@keyframes reveal{0%,100%{opacity:.25;transform:translateY(6px)}45%,70%{opacity:1;transform:none}}"
+    },
+    {
+      "file": "modals/toast.html",
+      "title": "Toast Notification",
+      "description": "A toast message that slides in, pauses, then exits.",
+      "category": "modals",
+      "keyframes": {
+        "toast": "0%,100%{opacity:0;transform:translateX(90px)}15%,70%{opacity:1;transform:none}"
+      },
+      "animations": [
+        "toast 3s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.toast{padding:12px 16px;border-radius:10px;background:rgba(124,155,255,.28);border:1px solid rgba(255,255,255,.25);animation:toast 3s ease-in-out infinite}\n@keyframes toast{0%,100%{opacity:0;transform:translateX(90px)}15%,70%{opacity:1;transform:none}}"
+    },
+    {
+      "file": "modals/todo.html",
+      "title": "Todo Modal",
+      "description": "A task-entry modal with animated list reveal.",
+      "category": "modals",
+      "keyframes": {
+        "taskIn": "0%,100%{opacity:.2;transform:translateX(-14px)}45%,70%{opacity:1;transform:none}"
+      },
+      "animations": [
+        "taskIn 2.7s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(3)",
+        ":nth-child(4)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.modal{width:320px;padding:20px}.task{height:32px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);animation:taskIn 2.7s ease-in-out infinite}\n.task:nth-child(3){animation-delay:.15s}.task:nth-child(4){animation-delay:.3s}\n@keyframes taskIn{0%,100%{opacity:.2;transform:translateX(-14px)}45%,70%{opacity:1;transform:none}}"
+    },
+    {
+      "file": "modals/tooltip.html",
+      "title": "Tooltip",
+      "description": "A floating tooltip bubble that fades and shifts into view.",
+      "category": "modals",
+      "keyframes": {
+        "tip": "50%{transform:translateY(-8px);opacity:.75}"
+      },
+      "animations": [
+        "tip 2.2s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.tip{padding:10px 14px;border-radius:10px;background:rgba(22,30,58,.95);border:1px solid rgba(255,255,255,.2);animation:tip 2.2s ease-in-out infinite}\n@keyframes tip{50%{transform:translateY(-8px);opacity:.75}}"
+    },
+    {
+      "file": "navs/breadcrum.html",
+      "title": "Breadcrumb Navigation",
+      "description": "Breadcrumb items with animated separators and active emphasis.",
+      "category": "navs",
+      "keyframes": {
+        "crumb": "50%{transform:translateY(-4px);background:rgba(124,155,255,.3)}"
+      },
+      "animations": [
+        "crumb 2.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.pill{padding:8px 12px;animation:crumb 2.8s ease-in-out infinite}.pill:nth-child(2){animation-delay:.2s}.pill:nth-child(3){animation-delay:.4s}\n@keyframes crumb{50%{transform:translateY(-4px);background:rgba(124,155,255,.3)}}"
+    },
+    {
+      "file": "navs/flower.html",
+      "title": "Flower Navigation",
+      "description": "Radial navigation petals blooming from a center point.",
+      "category": "navs",
+      "keyframes": {
+        "bloom": "50%{filter:brightness(1.25);transform:scale(1.08) translateY(-4px)}"
+      },
+      "animations": [
+        "bloom 2.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(1)",
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)",
+        ":nth-child(5)",
+        ":nth-child(6)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.flower{position:relative;width:190px;height:190px}\n.petal{position:absolute;left:50%;top:50%;width:70px;height:34px;margin:-17px -35px;border-radius:20px;background:rgba(124,155,255,.35);border:1px solid rgba(255,255,255,.25);animation:bloom 2.8s ease-in-out infinite}\n.petal:nth-child(1){transform:translate(0,-65px)}.petal:nth-child(2){transform:translate(56px,-32px)}.petal:nth-child(3){transform:translate(56px,32px)}.petal:nth-child(4){transform:translate(0,65px)}.petal:nth-child(5){transform:translate(-56px,32px)}.petal:nth-child(6){transform:translate(-56px,-32px)}\n@keyframes bloom{50%{filter:brightness(1.25);transform:scale(1.08) translateY(-4px)}}"
+    },
+    {
+      "file": "navs/momonav.html",
+      "title": "Momo Navigation",
+      "description": "Sliding tab navigation with a smooth active indicator.",
+      "category": "navs",
+      "keyframes": {
+        "focusTab": "0%,100%{background:transparent}20%,45%{background:rgba(124,155,255,.35)}"
+      },
+      "animations": [
+        "focusTab 3s infinite"
+      ],
+      "easings": [],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.nav{display:flex;gap:8px;padding:8px;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(255,255,255,.06)}\n.tab{padding:8px 12px;border-radius:10px;animation:focusTab 3s infinite}\n.tab:nth-child(2){animation-delay:1s}.tab:nth-child(3){animation-delay:2s}\n@keyframes focusTab{0%,100%{background:transparent}20%,45%{background:rgba(124,155,255,.35)}}"
+    },
+    {
+      "file": "navs/morphingtabs.html",
+      "title": "Morphing Tabs",
+      "description": "Tabs that morph shape and background between active states.",
+      "category": "navs",
+      "keyframes": {
+        "morphTab": "0%,100%{border-radius:12px;background:rgba(255,255,255,.08)}30%,45%{border-radius:24px;background:rgba(124,155,255,.38)}"
+      },
+      "animations": [
+        "morphTab 3s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.tab{padding:10px 16px;border-radius:12px;animation:morphTab 3s ease-in-out infinite}\n.tab:nth-child(2){animation-delay:1s}.tab:nth-child(3){animation-delay:2s}\n@keyframes morphTab{0%,100%{border-radius:12px;background:rgba(255,255,255,.08)}30%,45%{border-radius:24px;background:rgba(124,155,255,.38)}}"
+    },
+    {
+      "file": "navs/tipped.html",
+      "title": "Tipped Navigation",
+      "description": "Navigation labels with animated tooltip-like hints.",
+      "category": "navs",
+      "keyframes": {
+        "tipPulse": "20%,45%{opacity:1;top:-30px}"
+      },
+      "animations": [
+        "tipPulse 2.8s infinite"
+      ],
+      "easings": [],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.pill{position:relative;padding:10px 14px}\n.pill::after{content:\"Tip\";position:absolute;left:50%;top:-24px;transform:translateX(-50%);font-size:11px;padding:2px 6px;border-radius:999px;background:rgba(124,155,255,.35);opacity:0;animation:tipPulse 2.8s infinite}\n.pill:nth-child(2)::after{animation-delay:.6s}.pill:nth-child(3)::after{animation-delay:1.2s}\n@keyframes tipPulse{20%,45%{opacity:1;top:-30px}}"
+    },
+    {
+      "file": "navs/vercel.html",
+      "title": "Vercel-style Nav",
+      "description": "Minimal nav with animated underline indicator.",
+      "category": "navs",
+      "keyframes": {
+        "line": "20%,45%{width:100%}"
+      },
+      "animations": [
+        "line 3s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.nav{display:flex;gap:18px}.link{padding:8px 0;position:relative}.link::after{content:\"\";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:#9db4ff;animation:line 3s ease-in-out infinite}\n.link:nth-child(2)::after{animation-delay:1s}.link:nth-child(3)::after{animation-delay:2s}\n@keyframes line{20%,45%{width:100%}}"
+    },
+    {
+      "file": "sections/about/textreveal.html",
+      "title": "Text Reveal Section",
+      "description": "Heading text revealed with mask-like upward motion.",
+      "category": "sections",
+      "keyframes": {
+        "reveal": "to{opacity:1;transform:none}"
+      },
+      "animations": [
+        "reveal 1.6s forwards"
+      ],
+      "easings": [],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.word{display:inline-block;opacity:0;transform:translateY(24px);animation:reveal 1.6s forwards}\n.word:nth-child(2){animation-delay:.15s}.word:nth-child(3){animation-delay:.3s}.word:nth-child(4){animation-delay:.45s}\n@keyframes reveal{to{opacity:1;transform:none}}"
+    },
+    {
+      "file": "sections/features/featureswoop.html",
+      "title": "Feature Swoop",
+      "description": "Feature cards swoop in with spring-like lateral movement.",
+      "category": "sections",
+      "keyframes": {
+        "swoop": "0%,100%{opacity:.2;transform:translateX(-28px)}45%,70%{opacity:1;transform:none}"
+      },
+      "animations": [
+        "swoop 2.4s cubic-bezier(.2,.8,.2,1) infinite"
+      ],
+      "easings": [
+        "cubic-bezier(.2,.8,.2,1)"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.card{width:180px;height:110px;animation:swoop 2.4s cubic-bezier(.2,.8,.2,1) infinite}\n.card:nth-child(2){animation-delay:.2s}.card:nth-child(3){animation-delay:.4s}\n@keyframes swoop{0%,100%{opacity:.2;transform:translateX(-28px)}45%,70%{opacity:1;transform:none}}"
+    },
+    {
+      "file": "sections/features/scrollstack.html",
+      "title": "Scroll Stack",
+      "description": "Cards stacked vertically that offset as if driven by scroll.",
+      "category": "sections",
+      "keyframes": {
+        "stackMove": "50%{transform:translateY(-18px) scale(1.03)}"
+      },
+      "animations": [
+        "stackMove 3s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(1)",
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.stacker{position:relative;width:220px;height:240px}\n.layer{position:absolute;left:0;right:0;height:120px;border-radius:12px;background:rgba(124,155,255,.28);border:1px solid rgba(255,255,255,.24);animation:stackMove 3s ease-in-out infinite}\n.layer:nth-child(1){top:0}.layer:nth-child(2){top:40px;animation-delay:.25s}.layer:nth-child(3){top:80px;animation-delay:.5s}\n@keyframes stackMove{50%{transform:translateY(-18px) scale(1.03)}}"
+    },
+    {
+      "file": "sections/gallery/stagger3d.html",
+      "title": "Stagger 3D Gallery",
+      "description": "Gallery cards with staggered depth and rotation animations.",
+      "category": "sections",
+      "keyframes": {
+        "card3d": "50%{transform:rotateY(24deg) rotateX(12deg) translateY(-10px)}"
+      },
+      "animations": [
+        "card3d 2.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.card{width:120px;height:160px;transform-style:preserve-3d;animation:card3d 2.8s ease-in-out infinite}\n.card:nth-child(2){animation-delay:.25s}.card:nth-child(3){animation-delay:.5s}\n@keyframes card3d{50%{transform:rotateY(24deg) rotateX(12deg) translateY(-10px)}}"
+    },
+    {
+      "file": "sections/intergration/toolspread.html",
+      "title": "Tool Spread",
+      "description": "Tool icons spread out from center and settle into layout.",
+      "category": "sections",
+      "keyframes": {
+        "spread": "0%,100%{transform:translateX(0);opacity:.35}45%,70%{transform:translateX(var(--x));opacity:1}"
+      },
+      "animations": [
+        "spread 2.8s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(1)",
+        ":nth-child(2)",
+        ":nth-child(3)",
+        ":nth-child(4)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.tool{width:52px;height:52px;border-radius:12px;background:rgba(124,155,255,.33);border:1px solid rgba(255,255,255,.25);animation:spread 2.8s ease-in-out infinite}\n.tool:nth-child(1){--x:-80px}.tool:nth-child(2){--x:-28px}.tool:nth-child(3){--x:28px}.tool:nth-child(4){--x:80px}\n@keyframes spread{0%,100%{transform:translateX(0);opacity:.35}45%,70%{transform:translateX(var(--x));opacity:1}}"
+    },
+    {
+      "file": "staggercards.html",
+      "title": "Stagger Cards",
+      "description": "A card list that animates upward with staggered delays.",
+      "category": "other",
+      "keyframes": {
+        "stagger": "0%,100%{opacity:.25;transform:translateY(14px)}45%,70%{opacity:1;transform:none}"
+      },
+      "animations": [
+        "stagger 2.4s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [
+        ":nth-child(2)",
+        ":nth-child(3)"
+      ],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.card{width:240px;height:52px;animation:stagger 2.4s ease-in-out infinite}\n.card:nth-child(2){animation-delay:.2s}.card:nth-child(3){animation-delay:.4s}\n@keyframes stagger{0%,100%{opacity:.25;transform:translateY(14px)}45%,70%{opacity:1;transform:none}}"
+    },
+    {
+      "file": "text/swoop.html",
+      "title": "Swoop Text",
+      "description": "Display text that swoops in with eased horizontal motion.",
+      "category": "text",
+      "keyframes": {
+        "swoopText": "0%,100%{transform:translateX(-26px);opacity:.35}45%,70%{transform:none;opacity:1}"
+      },
+      "animations": [
+        "swoopText 2.2s ease-in-out infinite"
+      ],
+      "easings": [
+        "ease-in-out"
+      ],
+      "triggers": [],
+      "raw_css": ":root {\n  color-scheme: dark;\n  --bg: #0b1020;\n  --panel: #121a31;\n  --text: #e6ecff;\n  --accent: #7c9bff;\n}\n* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: radial-gradient(circle at top, #1a2550, var(--bg));\n  color: var(--text);\n}\n.stage {\n  width: min(92vw, 760px);\n  min-height: 320px;\n  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));\n  border: 1px solid rgba(255,255,255,.12);\n  border-radius: 18px;\n  padding: 36px;\n  display: grid;\n  place-items: center;\n  overflow: hidden;\n}\n.title {\n  margin: 0 0 12px;\n  font-weight: 700;\n  letter-spacing: .02em;\n}\n.subtitle {\n  opacity: .7;\n  font-size: 14px;\n  margin: 0 0 20px;\n}\n.demo {\n  display: grid;\n  place-items: center;\n  gap: 16px;\n}\n.btn,.chip,.card,.modal,.pill {\n  border-radius: 12px;\n  border: 1px solid rgba(255,255,255,.2);\n  background: rgba(255,255,255,.08);\n  color: var(--text);\n}\n.btn { padding: 12px 20px; font-weight: 600; }\n.row { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }\n.stack { display: grid; gap: 12px; }\n.track { display: flex; gap: 10px; }\n.tile { width: 64px; height: 64px; border-radius: 10px; background: rgba(124,155,255,.35); border: 1px solid rgba(255,255,255,.25); }\n.swoop{font-size:38px;font-weight:800;letter-spacing:.02em;animation:swoopText 2.2s ease-in-out infinite}\n@keyframes swoopText{0%,100%{transform:translateX(-26px);opacity:.35}45%,70%{transform:none;opacity:1}}"
+    }
+  ]
+}
