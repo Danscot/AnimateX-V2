@@ -1,122 +1,159 @@
-# AnimateX Skill Guide for AI Agents
+# AnimateX HTML/CSS Skill Guide for AI Agents
 
-Use this skill when a user asks for animated UI in a website, dashboard, landing page, or app screen.
+This skill is **HTML/CSS-only**.  
+Do not use React references from this guide.
 
-## 1) How to decide what animation to use
+Use this skill when the user asks for:
+- website animations,
+- UI micro-interactions,
+- motion-heavy layouts,
+- or reusable animation ideas that can later be converted into motion-graphics video scenes.
 
-1. Detect the UI goal from the prompt (navigation, CTA button, carousel, modal, section reveal, etc.).
-2. Pick the closest animation family from this repo.
-3. Use the HTML reference as motion/style baseline.
-4. Use the React/Next component as implementation baseline.
-5. Adjust props/classes to match the user’s branding and layout.
+---
 
-## 2) Source mapping pattern
+## 1) Core rule for this skill
 
-- HTML/CSS references live in: `html/...`
-- React components live in: `components/ui/...`
-- Showcase usage pages live in: `app/components/.../page.tsx`
+Always use files inside `html/` as the source of truth.
 
-Usually:
+- Reference only: structure, styling, timing, easing, keyframes, hover/click behavior.
+- Output goal: CSS animation instructions/components that can be reused or transformed into motion design pipelines.
 
-`html/<group>/<name>.html` → `components/ui/<group>/<name>.tsx`
+---
 
-Note: some source filenames intentionally use legacy spellings (for example `breadcrum`, `hightlight`, `dailog`, `intergration`); keep exact path names when importing.
-
-## 3) Animation index by intent
+## 2) Source map (HTML only)
 
 ### Navigation
+- `html/navs/vercel.html` (vercel-style underline/trailer feel)
+- `html/navs/tipped.html`
+- `html/navs/breadcrum.html`
+- `html/navs/momonav.html`
+- `html/navs/morphingtabs.html`
+- `html/navs/flower.html`
 
-- **Vercel-style nav (underline + hover trailer)**  
-  HTML: `html/navs/vercel.html`  
-  React: `components/ui/navs/vercel.tsx`  
-  Example page: `app/components/vercel/page.tsx`
-- Tipped nav: `html/navs/tipped.html` → `components/ui/navs/tipped.tsx`
-- Breadcrumb nav: `html/navs/breadcrum.html` → `components/ui/navs/breadcrum.tsx`
-- Momo nav: `html/navs/momonav.html` → `components/ui/navs/momonav.tsx`
-- Morphing tabs: `html/navs/morphingtabs.html` → `components/ui/navs/morphingtabs.tsx`
-- Flower nav: `html/navs/flower.html` → `components/ui/navs/flower.tsx`
-
-### Buttons / CTAs
-
-- `press`, `shimmerbtn`, `loadingButton`, `delete`, `gooey`, `copy`, `arrowbtn`, `themetoggler`, `aurabutton`, `feedback`, `pulse`, `aerobutton`, `rainbowbutton`, `expand`  
-  HTML: `html/buttons/<name>.html`  
-  React: `components/ui/buttons/<name>.tsx`
+### Buttons
+- `html/buttons/press.html`
+- `html/buttons/shimmerbtn.html`
+- `html/buttons/loadingButton.html`
+- `html/buttons/delete.html`
+- `html/buttons/gooey.html`
+- `html/buttons/copy.html`
+- `html/buttons/arrowbtn.html`
+- `html/buttons/themetoggler.html`
+- `html/buttons/aurabutton.html`
+- `html/buttons/feedback.html`
+- `html/buttons/pulse.html`
+- `html/buttons/aerobutton.html`
+- `html/buttons/rainbowbutton.html`
+- `html/buttons/expand.html`
 
 ### Carousels
-
-- `wheel`, `hightlight`, `picCycle`, `swift`, `scrollrotate`, `infinitecarousel`, `domino`, `infinitez`  
-  HTML: `html/carousels/<name>.html`  
-  React: `components/ui/carousels/<name>.tsx`
-- Canvas variants:  
-  HTML: `html/carousels/canvas/canvas.html`, `html/carousels/canvas/canvas02.html`  
-  React: `components/ui/carousels/canvas/canvas.tsx`, `components/ui/carousels/canvas/canvas02.tsx`
+- `html/carousels/wheel.html`
+- `html/carousels/hightlight.html`
+- `html/carousels/picCycle.html`
+- `html/carousels/swift.html`
+- `html/carousels/scrollrotate.html`
+- `html/carousels/infinitecarousel.html`
+- `html/carousels/domino.html`
+- `html/carousels/infinitez.html`
+- `html/carousels/canvas/canvas.html`
+- `html/carousels/canvas/canvas02.html`
 
 ### Cards
-
-- `stackswipe`, `flipy`, `lightcards`, `filter`, `flip`  
-  HTML: `html/cards/<name>.html`  
-  React: `components/ui/cards/<name>.tsx`
-- Stagger cards (root file):  
-  HTML: `html/staggercards.html`  
-  React: `components/ui/staggercards.tsx`
+- `html/cards/stackswipe.html`
+- `html/cards/flipy.html`
+- `html/cards/lightcards.html`
+- `html/cards/filter.html`
+- `html/cards/flip.html`
+- `html/staggercards.html`
 
 ### Modals / overlays
-
-- `todo`, `tooltip`, `dailog`, `sign`, `reportbug`, `toast`  
-  HTML: `html/modals/<name>.html`  
-  React: `components/ui/modals/<name>.tsx`
+- `html/modals/todo.html`
+- `html/modals/tooltip.html`
+- `html/modals/dailog.html`
+- `html/modals/sign.html`
+- `html/modals/reportbug.html`
+- `html/modals/toast.html`
 
 ### Inputs
+- `html/inputs/dropdown.html`
 
-- Animated dropdown  
-  HTML: `html/inputs/dropdown.html`  
-  React: `components/ui/inputs/dropdown.tsx`
+### Text / typography
+- `html/text/swoop.html`
+- `html/letterstack.html`
 
-### Text / typographic motion
+### Sections
+- `html/sections/features/featureswoop.html`
+- `html/sections/features/scrollstack.html`
+- `html/sections/about/textreveal.html`
+- `html/sections/gallery/stagger3d.html`
+- `html/sections/intergration/toolspread.html`
 
-- Swoop text  
-  HTML: `html/text/swoop.html`  
-  React: `components/ui/text/swoop.tsx`
-- Letter stack (root file):  
-  HTML: `html/letterstack.html`  
-  React: `components/ui/letterstack.tsx`
+Note: keep legacy filenames exactly as written (for example `breadcrum`, `hightlight`, `dailog`, `intergration`).
 
-### Full sections
+---
 
-- Features:  
-  `html/sections/features/featureswoop.html` → `components/ui/sections/features/featureswoop.tsx`  
-  `html/sections/features/scrollstack.html` → `components/ui/sections/features/scrollstack.tsx`
-- About:  
-  `html/sections/about/textreveal.html` → `components/ui/sections/about/textreveal.tsx`
-- Gallery:  
-  `html/sections/gallery/stagger3d.html` → `components/ui/sections/gallery/stagger3d.tsx`
-- Integration:  
-  `html/sections/intergration/toolspread.html` → `components/ui/sections/intergration/toolspread.tsx`
+## 3) Agent workflow (HTML/CSS animation extraction)
 
-## 4) Selection rules for the AI agent
+When a user asks for animation work:
 
-- If the user asks for a **clean SaaS/header nav similar to Vercel**, use `VercelNav` first.
-- If the user asks for **tabbed nav with fluid transitions**, prefer `morphingtabs`.
-- If the user asks for **attention-grabbing CTA**, choose from button animations by tone:
-  - subtle: `press`, `aerobutton`
-  - vivid: `rainbowbutton`, `gooey`, `shimmerbtn`
-  - utility: `copy`, `loadingButton`, `themetoggler`
-- If the user asks for **storytelling / scrolling sections**, use `scrollstack`, `featureswoop`, `textreveal`.
-- If the user asks for **media-heavy hero/gallery**, start from `swift`, `picCycle`, `canvas`.
+1. Identify intent: nav, button, modal, card, carousel, text, or section animation.
+2. Pick the closest `html/...` reference file.
+3. Extract motion logic:
+   - keyframes
+   - animation duration/delay
+   - easing curve
+   - transform path (translate/scale/rotate/skew)
+   - opacity/blur/filter behavior
+   - trigger type (hover/click/scroll/loop)
+4. Rewrite as reusable CSS blocks with clear class naming.
+5. Preserve behavior fidelity first, then theme/colors/layout.
+6. If asked for video-ready design direction, convert animation into:
+   - scene timeline,
+   - in/out transitions,
+   - loop points,
+   - camera-safe composition notes (centering, spacing, rhythm).
 
-## 5) Example decision (from user prompt)
+---
 
-Prompt type: “Build a modern website with a Vercel-like navbar.”  
-Agent behavior:
-1. Select `html/navs/vercel.html` as visual behavior reference.
-2. Implement with `components/ui/navs/vercel.tsx` (`VercelNav`).
-3. Follow usage structure from `app/components/vercel/page.tsx`.
-4. Pass `links` and optional style props (`className`, `linkstyle`, `dashstyle`, `hoverstyle`, `speed`) to fit the page brand.
+## 4) Selection rules by request type
 
-## 6) Integration checklist the AI should follow
+- If user asks for a **Vercel-like navbar**: start from `html/navs/vercel.html`.
+- If user asks for **minimal modern nav tabs**: compare `morphingtabs.html` and `tipped.html`.
+- If user asks for **high-attention CTA**: pick from `rainbowbutton.html`, `gooey.html`, `shimmerbtn.html`.
+- If user asks for **functional button states**: pick `loadingButton.html`, `copy.html`, `delete.html`.
+- If user asks for **animated content storytelling on scroll**: pick `scrollstack.html`, `textreveal.html`, `stagger3d.html`.
+- If user asks for **carousel hero motion**: pick from `swift.html`, `picCycle.html`, `wheel.html`, `canvas/*.html`.
+- If user asks for **overlay feedback/toast/dialog flow**: pick from `toast.html`, `dailog.html`, `tooltip.html`, `todo.html`.
 
-- Confirm user’s target section and interaction intent.
-- Pick one primary animation (avoid stacking many competing effects).
-- Keep accessibility in mind (readable contrast, clear states, not motion-overloaded).
-- Keep animation speed moderate and consistent with surrounding UI.
-- Reuse existing component props before rewriting motion logic.
+---
+
+## 5) Example behavior (requested by user)
+
+Prompt example:  
+“Make me a website with a Vercel-type navbar.”
+
+AI should:
+1. Open `html/navs/vercel.html`.
+2. Recreate the visual behavior in CSS:
+   - clean horizontal nav layout,
+   - animated underline indicator/trailer,
+   - smooth timing and spacing.
+3. Keep it modular so the same motion can be reused in other headers/scene compositions.
+4. If needed for video pipeline, describe timeline beats:
+   - idle state,
+   - hover sweep,
+   - active tab lock.
+
+---
+
+## 6) Output standards for future motion-graphics conversion
+
+When generating final answers from this skill, the AI should provide:
+- semantic HTML structure,
+- scoped CSS animation classes,
+- named keyframes,
+- trigger logic (hover/click/auto/scroll),
+- tunable timing tokens (`--duration`, `--delay`, `--easing`),
+- optional scene notes for timeline/video adaptation.
+
+Keep outputs deterministic, modular, and easy to convert into motion-graphics scenes later.
