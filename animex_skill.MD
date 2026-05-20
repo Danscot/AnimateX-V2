@@ -20,6 +20,8 @@ Usually:
 
 `html/<group>/<name>.html` → `components/ui/<group>/<name>.tsx`
 
+Note: some source filenames intentionally use legacy spellings (for example `breadcrum`, `hightlight`, `dailog`, `intergration`); keep exact path names when importing.
+
 ## 3) Animation index by intent
 
 ### Navigation
